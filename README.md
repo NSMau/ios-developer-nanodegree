@@ -1,2 +1,3 @@
-# ios-developer-nanodegree
-Code for exercises and projects from Udacity's iOS Developer Nanondegree
+# iOS Developer Nanodegree
+
+This repository contains all the code from exercises and projects completed while taking the Udacity's iOS Developer Nanondegree.
