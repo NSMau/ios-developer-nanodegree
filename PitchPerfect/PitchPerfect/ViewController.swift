@@ -9,20 +9,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  @IBOutlet weak var startRecordingButton: UIButton!
+  @IBOutlet weak var stopRecordingButton: UIButton!
   @IBOutlet weak var recordingLabel: UILabel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    stopRecordingButton.isHidden = true
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    print("Hello, world!")
   }
 
   @IBAction func recordAudio(_ sender: Any) {
-    print("The Record button has been pressed!")
-    recordingLabel.text = "Recording in Progres..."
+    recordingLabel.text = "Recording in Progress..."
+    startRecordingButton.isHidden = true
+    stopRecordingButton.isHidden = false
   }
   
   @IBAction func stopRecording(_ sender: Any) {
-    print("The Stop Recording button has been pressed!")
+    recordingLabel.text = "Tap to Record"
+    startRecordingButton.isHidden = false
+    stopRecordingButton.isHidden = true
   }
 }
 
