@@ -24,11 +24,23 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     super.viewWillAppear(animated)
   }
   
+  // MARK: Basic UI Configuration
+  func toggleUIConfig(isRecordingInProgress: Bool = false) {
+    if isRecordingInProgress {
+      recordingLabel.text = "Recording in Progress…"
+      
+      startRecordingButton.isHidden = true
+      stopRecordingButton.isHidden = false
+    } else {
+      recordingLabel.text = "Tap to Record"
+      
+      startRecordingButton.isHidden = false
+      stopRecordingButton.isHidden = true
+    }
+  }
+  
   @IBAction func recordAudio(_ sender: Any) {
-    recordingLabel.text = "Recording in Progress..."
-    
-    startRecordingButton.isHidden = true
-    stopRecordingButton.isHidden = false
+    toggleUIConfig(isRecordingInProgress: true)
     
     let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
     let recordingName = "voice-recording.wav"
@@ -53,10 +65,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
   }
   
   @IBAction func stopRecording(_ sender: Any) {
-    recordingLabel.text = "Tap to Record"
-    
-    startRecordingButton.isHidden = false
-    stopRecordingButton.isHidden = true
+    toggleUIConfig()
     
     audioRecorder.stop()
     

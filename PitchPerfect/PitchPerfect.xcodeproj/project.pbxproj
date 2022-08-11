@@ -14,6 +14,7 @@
 		B30CEE81289841D100F7934C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B30CEE80289841D100F7934C /* Assets.xcassets */; };
 		B30CEE84289841D100F7934C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B30CEE82289841D100F7934C /* LaunchScreen.storyboard */; };
 		B30CEE8C28A2BC7E00F7934C /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CEE8B28A2BC7D00F7934C /* PlaySoundsViewController.swift */; };
+		B30CEE8E28A301F000F7934C /* PlaySoundsViewController+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CEE8D28A301EF00F7934C /* PlaySoundsViewController+Audio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B30CEE83289841D100F7934C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B30CEE85289841D100F7934C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B30CEE8B28A2BC7D00F7934C /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		B30CEE8D28A301EF00F7934C /* PlaySoundsViewController+Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewController+Audio.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				B30CEE82289841D100F7934C /* LaunchScreen.storyboard */,
 				B30CEE85289841D100F7934C /* Info.plist */,
 				B30CEE8B28A2BC7D00F7934C /* PlaySoundsViewController.swift */,
+				B30CEE8D28A301EF00F7934C /* PlaySoundsViewController+Audio.swift */,
 			);
 			path = PitchPerfect;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B30CEE8E28A301F000F7934C /* PlaySoundsViewController+Audio.swift in Sources */,
 				B30CEE7C289841CE00F7934C /* RecordSoundsViewController.swift in Sources */,
 				B30CEE78289841CE00F7934C /* AppDelegate.swift in Sources */,
 				B30CEE8C28A2BC7E00F7934C /* PlaySoundsViewController.swift in Sources */,
