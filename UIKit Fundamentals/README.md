@@ -12,7 +12,7 @@ This is a very simple app which consists of one label to display the count resul
 
 Here's a diagramm of the app's architecture.
 
-![Diagramm of the Click Counter app's architecture](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/click-counter-app-architecture.png)
+![Diagramm of the Click Counter app's architecture](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/click-counter-app-architecture-diagramm.png)
 
 The objects are represented as a rectangle and the object properties are represented as circles. The objects that render the view are shown in blue. When the user taps on a button, the button interprets it as an event, which invokes an action on the ViewController, which ultimately updates the model and the view to reflect the changes.
 
