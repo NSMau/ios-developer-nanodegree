@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sureton-Comics.ttf">
+            <string>SuretonComics-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--ChoiceViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SelectWeaponViewController" id="BYZ-38-t0r" userLabel="ChoiceViewController" customClass="ChoiceViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="SfB-4I-Tu7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="AVQ-M8-1JS" userLabel="selectWeaponView">
+                                <rect key="frame" x="106" y="160" width="202" height="576"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your weapon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1u-qY-OTS">
+                                        <rect key="frame" x="0.0" y="0.0" width="202" height="24"/>
+                                        <fontDescription key="fontDescription" name="SuretonComics-Regular" family="Sureton Comics" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="p7S-nX-GQY" userLabel="buttonsStackView">
+                                        <rect key="frame" x="40.5" y="56" width="121" height="520"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJ9-bO-WVq" userLabel="buttonRock">
+                                                <rect key="frame" x="0.0" y="0.0" width="121" height="160"/>
+                                                <accessibility key="accessibilityConfiguration" label="Rock"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="121" id="7ng-zU-jZK"/>
+                                                    <constraint firstAttribute="height" constant="160" id="J6G-YI-e7U"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="rock-hand-gesture"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="determineWinner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K9e-1V-5yg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqh-Ks-98i" userLabel="buttonScissors">
+                                                <rect key="frame" x="0.0" y="180" width="121" height="160"/>
+                                                <accessibility key="accessibilityConfiguration" label="Scissors"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="121" id="4bO-CG-vK4"/>
+                                                    <constraint firstAttribute="height" constant="160" id="BP8-7m-MEv"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="scissors-hand-gesture"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="chooseScissors:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lj3-Cd-tcf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrc-cc-m6T" userLabel="buttonPaper">
+                                                <rect key="frame" x="0.0" y="360" width="121" height="160"/>
+                                                <accessibility key="accessibilityConfiguration" label="Paper"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="121" id="g5z-9t-hez"/>
+                                                    <constraint firstAttribute="height" constant="160" id="gsu-1S-WHc"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="paper-hand-gesture"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="determineWinner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KKj-nr-F1Z"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="SfB-4I-Tu7" secondAttribute="bottom" id="KbI-Pg-Z3n"/>
+                            <constraint firstAttribute="trailing" secondItem="SfB-4I-Tu7" secondAttribute="trailing" id="N5T-4A-biC"/>
+                            <constraint firstItem="AVQ-M8-1JS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S6n-49-7A9"/>
+                            <constraint firstItem="AVQ-M8-1JS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WNf-yc-uK3"/>
+                            <constraint firstItem="SfB-4I-Tu7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZzL-MK-Lov"/>
+                            <constraint firstItem="SfB-4I-Tu7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nW9-10-rFS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="paperButton" destination="xrc-cc-m6T" id="uwe-vu-WKm"/>
+                        <outlet property="rockButton" destination="OJ9-bO-WVq" id="Gps-yk-7cn"/>
+                        <outlet property="scissorsButton" destination="jqh-Ks-98i" id="FQ1-kH-SQg"/>
+                        <segue destination="RgU-EV-MPG" kind="presentation" identifier="play" id="BQB-3g-C0A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+        <!--GameResultViewController-->
+        <scene sceneID="rZC-SD-09o">
+            <objects>
+                <viewController storyboardIdentifier="GameResultViewController" id="RgU-EV-MPG" userLabel="GameResultViewController" customClass="GameResultViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0l9-lm-ZCA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="vfr-Ua-FyT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="192" translatesAutoresizingMaskIntoConstraints="NO" id="Kie-UA-a6o" userLabel="mainView">
+                                <rect key="frame" x="47" y="249.5" width="320" height="528.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="JLC-CD-sG6" userLabel="gameResultView">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="288.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock-wins" translatesAutoresizingMaskIntoConstraints="NO" id="Xwf-I5-iXD" userLabel="gameResultImage">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="200.5"/>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Rock crushes scissors! You WIN!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Y4t-XN-iys" userLabel="gameResultMessage">
+                                                <rect key="frame" x="40" y="224.5" width="240" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="eyZ-Wn-P0z"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="SuretonComics-Regular" family="Sureton Comics" pointSize="24"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Y4t-XN-iys" firstAttribute="leading" secondItem="JLC-CD-sG6" secondAttribute="leading" constant="40" id="Lpa-FN-bDI"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XF-ug-yLC" userLabel="playAgainButton">
+                                        <rect key="frame" x="80" y="480.5" width="160" height="48"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="k6X-O2-oMS"/>
+                                            <constraint firstAttribute="height" constant="48" id="xag-8c-cIX"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Play Again" titleAlignment="center">
+                                            <fontDescription key="titleFontDescription" name="SuretonComics-Regular" family="Sureton Comics" pointSize="16"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="playAgain" destination="RgU-EV-MPG" eventType="touchUpInside" id="dlU-NO-Jad"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q2N-OL-rI9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vfr-Ua-FyT" firstAttribute="top" secondItem="0l9-lm-ZCA" secondAttribute="top" id="RKt-oU-8ST"/>
+                            <constraint firstAttribute="bottom" secondItem="vfr-Ua-FyT" secondAttribute="bottom" id="Xg4-4j-EDX"/>
+                            <constraint firstItem="Kie-UA-a6o" firstAttribute="centerX" secondItem="0l9-lm-ZCA" secondAttribute="centerX" id="ZCk-OG-avR"/>
+                            <constraint firstItem="vfr-Ua-FyT" firstAttribute="leading" secondItem="0l9-lm-ZCA" secondAttribute="leading" id="ZlL-XN-pL7"/>
+                            <constraint firstAttribute="trailing" secondItem="vfr-Ua-FyT" secondAttribute="trailing" id="eN1-wG-7lJ"/>
+                            <constraint firstAttribute="bottom" secondItem="Kie-UA-a6o" secondAttribute="bottom" constant="64" id="oFe-7p-okA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gameResultImage" destination="Xwf-I5-iXD" id="bmh-vK-fkf"/>
+                        <outlet property="gameResultMessage" destination="Y4t-XN-iys" id="DkJ-Rv-oDx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQy-aM-uH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853.62318840579712" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="428" height="926"/>
+        <image name="paper-hand-gesture" width="120" height="160.5"/>
+        <image name="rock-hand-gesture" width="120" height="160"/>
+        <image name="rock-wins" width="320" height="200.5"/>
+        <image name="scissors-hand-gesture" width="120" height="160"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
