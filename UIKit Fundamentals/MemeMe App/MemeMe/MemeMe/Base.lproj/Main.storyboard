@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" userLabel="Home View Controller" customClass="HomeViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All memes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8M2-se-Xvl" userLabel="sceneTitle">
+                                <rect key="frame" x="24" y="84" width="155" height="38.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" red="0.25098039220000001" green="0.22352941179999999" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="bHa-F4-5Bp" userLabel="Empty State Stack View">
+                                <rect key="frame" x="57" y="287.5" width="300" height="321"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-state-illustration" translatesAutoresizingMaskIntoConstraints="NO" id="7Zp-71-RQs" userLabel="emptyStateImage">
+                                        <rect key="frame" x="22" y="0.0" width="256" height="160"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="256" id="OHh-9w-Psd"/>
+                                            <constraint firstAttribute="height" constant="160" id="k9V-3E-k2e"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="8XJ-uL-CRG" userLabel="Empty State Text Stack View">
+                                        <rect key="frame" x="0.0" y="192" width="300" height="129"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing to see here — yet." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oK6-tI-yqy" userLabel="emptyStateTitle">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="Zhb-mg-EvV"/>
+                                                    <constraint firstAttribute="width" constant="300" id="siL-fq-Mdx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <color key="textColor" red="0.25098039220000001" green="0.22352941179999999" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a picture from the Photo Library or take a picture with the camera to get started." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVN-2C-vaL" userLabel="emptyStateDescription">
+                                                <rect key="frame" x="10" y="41" width="280" height="88"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="280" id="IMx-hz-UbK"/>
+                                                    <constraint firstAttribute="height" constant="88" id="nbG-BA-8kz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="0.25098039220000001" green="0.22352941179999999" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhb-fP-6UC" userLabel="imagePickerToolbar">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.22352941179999999" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <barButtonItem title="Photo Library" id="Ind-PB-OQL" userLabel="photoLibraryButton">
+                                        <connections>
+                                            <action selector="pickImage:" destination="BYZ-38-t0r" id="XHc-2H-7GM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem tag="1" title="Camera" id="HvT-Nz-WfY" userLabel="cameraButton">
+                                        <connections>
+                                            <action selector="pickImage:" destination="BYZ-38-t0r" id="d4o-Xg-sUJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" red="0.65490196079999996" green="0.63137254899999995" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.25098039220000001" green="0.22352941179999999" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.65490196079999996" green="0.63137254899999995" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8M2-se-Xvl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="6ZV-uY-LAc"/>
+                            <constraint firstItem="mhb-fP-6UC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8Uw-oI-p1k"/>
+                            <constraint firstItem="bHa-F4-5Bp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D4a-E3-d2c"/>
+                            <constraint firstItem="bHa-F4-5Bp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EUQ-lH-t4U"/>
+                            <constraint firstItem="mhb-fP-6UC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="FIk-YB-k0B"/>
+                            <constraint firstItem="8M2-se-Xvl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="j0v-8o-M1h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8M2-se-Xvl" secondAttribute="trailing" symbolic="YES" id="nnQ-UB-9CJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mhb-fP-6UC" secondAttribute="bottom" id="pPf-W0-shd"/>
+                            <constraint firstAttribute="trailing" secondItem="mhb-fP-6UC" secondAttribute="trailing" id="vii-XZ-gH1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="HvT-Nz-WfY" id="eqX-DU-XwK"/>
+                        <outlet property="emptyState" destination="bHa-F4-5Bp" id="gpu-tY-18f"/>
+                        <outlet property="imagePickerToolbar" destination="mhb-fP-6UC" id="Dj2-IX-rgB"/>
+                        <outlet property="photoLibraryButton" destination="Ind-PB-OQL" id="eZo-Nb-kGe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+        <!--Meme Editor View Controller-->
+        <scene sceneID="IK3-z1-fmx">
+            <objects>
+                <viewController storyboardIdentifier="MemeEditorViewController" id="Jvg-mt-Z6A" userLabel="Meme Editor View Controller" customClass="MemeEditorViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PRz-bu-nOh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fY0-Fn-fHI" userLabel="memeImage">
+                                <rect key="frame" x="16" y="257" width="382" height="382"/>
+                                <color key="backgroundColor" red="0.65490196079999996" green="0.63137254899999995" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fY0-Fn-fHI" secondAttribute="height" multiplier="1:1" id="9aN-t7-VJ4"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="top" usesAttributedText="YES" allowsEditingTextAttributes="YES" adjustsFontSizeToFit="NO" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="r1H-28-TAA" userLabel="memeTopText">
+                                <rect key="frame" x="57" y="273" width="300" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="64u-vf-f33"/>
+                                    <constraint firstAttribute="width" constant="300" id="QwN-5E-Gge"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Top Text">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="32" name="Impact"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" tag="1" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" usesAttributedText="YES" allowsEditingTextAttributes="YES" adjustsFontSizeToFit="NO" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="nxL-PY-XDk" userLabel="memeBottomText">
+                                <rect key="frame" x="57" y="584" width="300" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="BbN-BL-IF1"/>
+                                    <constraint firstAttribute="width" constant="300" id="SLQ-Mn-bFc"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Bottom Text">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="32" name="Impact"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egp-gf-tIf" userLabel="memeEditorNavigationBar">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="barTintColor" red="0.25098039220000001" green="0.22352941179999999" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <color key="textColor" red="0.65490196079999996" green="0.63137254899999995" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Create meme" id="DXU-z3-Gkx">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="FrZ-f5-nST">
+                                            <color key="tintColor" red="0.65490196079999996" green="0.63137254899999995" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="cancelMemeEditing" destination="Jvg-mt-Z6A" id="72L-zd-2w6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="OAF-yz-g3s" userLabel="Meme Editing Done Button">
+                                            <color key="tintColor" red="0.65490196079999996" green="0.63137254899999995" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="handleDoneMemeEditing" destination="Jvg-mt-Z6A" id="cci-O0-DI1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hCL-Li-s1D"/>
+                        <color key="backgroundColor" red="0.65490196079999996" green="0.63137254899999995" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nxL-PY-XDk" firstAttribute="bottom" secondItem="fY0-Fn-fHI" secondAttribute="bottom" constant="-16" id="3GB-yv-cKH"/>
+                            <constraint firstItem="nxL-PY-XDk" firstAttribute="centerX" secondItem="PRz-bu-nOh" secondAttribute="centerX" id="573-ik-wig"/>
+                            <constraint firstItem="fY0-Fn-fHI" firstAttribute="centerY" secondItem="PRz-bu-nOh" secondAttribute="centerY" id="K3V-MY-woU"/>
+                            <constraint firstItem="fY0-Fn-fHI" firstAttribute="leading" secondItem="PRz-bu-nOh" secondAttribute="leading" constant="16" id="LJh-Rb-WH1"/>
+                            <constraint firstItem="fY0-Fn-fHI" firstAttribute="trailing" secondItem="PRz-bu-nOh" secondAttribute="trailing" constant="-16" id="cDu-cT-ZfJ"/>
+                            <constraint firstItem="egp-gf-tIf" firstAttribute="leading" secondItem="PRz-bu-nOh" secondAttribute="leading" id="gJz-lY-3ql"/>
+                            <constraint firstItem="egp-gf-tIf" firstAttribute="trailing" secondItem="PRz-bu-nOh" secondAttribute="trailing" id="kxI-Ie-LqG"/>
+                            <constraint firstItem="r1H-28-TAA" firstAttribute="centerX" secondItem="PRz-bu-nOh" secondAttribute="centerX" id="sKs-SD-Ejq"/>
+                            <constraint firstItem="r1H-28-TAA" firstAttribute="top" secondItem="fY0-Fn-fHI" secondAttribute="top" constant="16" id="t48-PL-jc2"/>
+                            <constraint firstItem="egp-gf-tIf" firstAttribute="top" secondItem="PRz-bu-nOh" secondAttribute="top" id="uNu-0L-6et"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="memeBottomText" destination="nxL-PY-XDk" id="H9g-Hd-UzP"/>
+                        <outlet property="memeEditingCancelButton" destination="FrZ-f5-nST" id="ufX-lB-tdI"/>
+                        <outlet property="memeEditingDoneButton" destination="OAF-yz-g3s" id="pSO-XF-6AM"/>
+                        <outlet property="memeEditorNavigationBar" destination="egp-gf-tIf" id="JUh-vc-Ug6"/>
+                        <outlet property="memeImageCanvas" destination="fY0-Fn-fHI" id="BIO-Q9-fpd"/>
+                        <outlet property="memeTopText" destination="r1H-28-TAA" id="qWF-S7-6lw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pvN-UO-eNg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="763.768115942029" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="empty-state-illustration" width="256" height="160"/>
+    </resources>
+</document>

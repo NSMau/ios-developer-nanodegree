@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Qg3-9i-8D6">
+                                <rect key="frame" x="79" y="306" width="256" height="284"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meme-me-logo" translatesAutoresizingMaskIntoConstraints="NO" id="qc8-8h-JEh">
+                                        <rect key="frame" x="15.5" y="0.0" width="225" height="192"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="225" id="Rfr-9z-USC"/>
+                                            <constraint firstAttribute="height" constant="192" id="qUn-0M-vuh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsC-nc-Wfn">
+                                        <rect key="frame" x="0.0" y="208" width="256" height="76"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="76" id="U0G-oM-YBa"/>
+                                            <constraint firstAttribute="width" constant="256" id="xKT-nm-ELJ"/>
+                                        </constraints>
+                                        <string key="text">MemeMe — One app
+to meme them all!</string>
+                                        <color key="textColor" red="0.25098039215686274" green="0.22352941176470587" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPI-uf-cWF">
+                                <rect key="frame" x="194" y="829" width="26" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.25098039220000001" green="0.22352941179999999" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.65490196078431373" green="0.63137254901960782" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pPI-uf-cWF" secondAttribute="bottom" constant="16" id="2eQ-E9-zhq"/>
+                            <constraint firstItem="Qg3-9i-8D6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="H5h-cz-UFl"/>
+                            <constraint firstItem="pPI-uf-cWF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="L0h-Lx-zWE"/>
+                            <constraint firstItem="Qg3-9i-8D6" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ock-JK-m2S"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="meme-me-logo" width="300.5" height="256.5"/>
+    </resources>
+</document>
