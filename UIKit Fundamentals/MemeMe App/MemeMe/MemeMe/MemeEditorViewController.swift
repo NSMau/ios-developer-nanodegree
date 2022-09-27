@@ -37,7 +37,7 @@ class MemeEditorViewController: UIViewController, UITextFieldDelegate {
     memeImageCanvas.image = memeUneditedImage!
     
     // Resize pickedImageCanvas to fit pickedImage
-    self.view.layoutIfNeeded()
+    view.layoutIfNeeded()
     
     observeKeyboardNotifications()
   }
@@ -129,9 +129,6 @@ class MemeEditorViewController: UIViewController, UITextFieldDelegate {
   
   /// Returns the final meme image, represented as a `UIImage` with the overlaying text
   private func generateMemeArtwork() -> UIImage {
-    let offsetX: CGFloat = -16.0
-    let offsetY = (self.view.frame.size.height - memeImageCanvas.frame.size.height) / 2
-    
     memeEditorNavigationBar.isHidden = true
     
     // Create context with meme artwork's size
@@ -140,7 +137,7 @@ class MemeEditorViewController: UIViewController, UITextFieldDelegate {
     // Move to meme artwork's position
     let context = UIGraphicsGetCurrentContext()
 
-    context!.translateBy(x: offsetX, y: -offsetY)
+    context!.translateBy(x: 0.0, y: -44.0)
     
     // Capture snapshot of the meme artwork
     view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)

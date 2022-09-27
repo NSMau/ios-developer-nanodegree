@@ -94,6 +94,7 @@
                     <connections>
                         <outlet property="cameraButton" destination="HvT-Nz-WfY" id="eqX-DU-XwK"/>
                         <outlet property="emptyState" destination="bHa-F4-5Bp" id="gpu-tY-18f"/>
+                        <outlet property="emptyStateIllustration" destination="7Zp-71-RQs" id="5qZ-CW-qly"/>
                         <outlet property="imagePickerToolbar" destination="mhb-fP-6UC" id="Dj2-IX-rgB"/>
                         <outlet property="photoLibraryButton" destination="Ind-PB-OQL" id="eZo-Nb-kGe"/>
                     </connections>
@@ -111,17 +112,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fY0-Fn-fHI" userLabel="memeImage">
-                                <rect key="frame" x="16" y="257" width="382" height="382"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" red="0.65490196079999996" green="0.63137254899999995" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="fY0-Fn-fHI" secondAttribute="height" multiplier="1:1" id="9aN-t7-VJ4"/>
-                                </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="top" usesAttributedText="YES" allowsEditingTextAttributes="YES" adjustsFontSizeToFit="NO" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="r1H-28-TAA" userLabel="memeTopText">
-                                <rect key="frame" x="57" y="273" width="300" height="39"/>
+                            <textField opaque="NO" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="top" usesAttributedText="YES" allowsEditingTextAttributes="YES" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="r1H-28-TAA" userLabel="memeTopText">
+                                <rect key="frame" x="24" y="60" width="366" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="64u-vf-f33"/>
-                                    <constraint firstAttribute="width" constant="300" id="QwN-5E-Gge"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Top Text">
@@ -134,11 +131,10 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" tag="1" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" usesAttributedText="YES" allowsEditingTextAttributes="YES" adjustsFontSizeToFit="NO" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="nxL-PY-XDk" userLabel="memeBottomText">
-                                <rect key="frame" x="57" y="584" width="300" height="39"/>
+                            <textField opaque="NO" tag="1" contentMode="bottom" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" usesAttributedText="YES" allowsEditingTextAttributes="YES" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="nxL-PY-XDk" userLabel="memeBottomText">
+                                <rect key="frame" x="24" y="841" width="366" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="BbN-BL-IF1"/>
-                                    <constraint firstAttribute="width" constant="300" id="SLQ-Mn-bFc"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Bottom Text">
@@ -153,6 +149,9 @@
                             </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egp-gf-tIf" userLabel="memeEditorNavigationBar">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="LKJ-P5-I9w"/>
+                                </constraints>
                                 <color key="barTintColor" red="0.25098039220000001" green="0.22352941179999999" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
@@ -166,10 +165,10 @@
                                                 <action selector="cancelMemeEditing" destination="Jvg-mt-Z6A" id="72L-zd-2w6"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Done" id="OAF-yz-g3s" userLabel="Meme Editing Done Button">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="x8n-Rs-fQ3">
                                             <color key="tintColor" red="0.65490196079999996" green="0.63137254899999995" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
-                                                <action selector="handleDoneMemeEditing" destination="Jvg-mt-Z6A" id="cci-O0-DI1"/>
+                                                <action selector="handleDoneMemeEditing" destination="Jvg-mt-Z6A" id="4L1-sw-kZD"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -179,22 +178,27 @@
                         <viewLayoutGuide key="safeArea" id="hCL-Li-s1D"/>
                         <color key="backgroundColor" red="0.65490196079999996" green="0.63137254899999995" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fY0-Fn-fHI" secondAttribute="bottom" id="1BQ-ud-Aap"/>
                             <constraint firstItem="nxL-PY-XDk" firstAttribute="bottom" secondItem="fY0-Fn-fHI" secondAttribute="bottom" constant="-16" id="3GB-yv-cKH"/>
-                            <constraint firstItem="nxL-PY-XDk" firstAttribute="centerX" secondItem="PRz-bu-nOh" secondAttribute="centerX" id="573-ik-wig"/>
-                            <constraint firstItem="fY0-Fn-fHI" firstAttribute="centerY" secondItem="PRz-bu-nOh" secondAttribute="centerY" id="K3V-MY-woU"/>
-                            <constraint firstItem="fY0-Fn-fHI" firstAttribute="leading" secondItem="PRz-bu-nOh" secondAttribute="leading" constant="16" id="LJh-Rb-WH1"/>
-                            <constraint firstItem="fY0-Fn-fHI" firstAttribute="trailing" secondItem="PRz-bu-nOh" secondAttribute="trailing" constant="-16" id="cDu-cT-ZfJ"/>
+                            <constraint firstItem="hCL-Li-s1D" firstAttribute="trailing" secondItem="r1H-28-TAA" secondAttribute="trailing" constant="24" id="7ot-6P-FoM"/>
+                            <constraint firstItem="hCL-Li-s1D" firstAttribute="trailing" secondItem="nxL-PY-XDk" secondAttribute="trailing" constant="24" id="9rv-Gg-QFM"/>
+                            <constraint firstItem="r1H-28-TAA" firstAttribute="leading" secondItem="hCL-Li-s1D" secondAttribute="leading" constant="24" id="BJ6-P5-4oh"/>
+                            <constraint firstItem="fY0-Fn-fHI" firstAttribute="top" secondItem="egp-gf-tIf" secondAttribute="top" constant="44" id="Caf-ot-XcR"/>
+                            <constraint firstItem="fY0-Fn-fHI" firstAttribute="leading" secondItem="PRz-bu-nOh" secondAttribute="leading" id="LJh-Rb-WH1"/>
+                            <constraint firstItem="nxL-PY-XDk" firstAttribute="leading" secondItem="hCL-Li-s1D" secondAttribute="leading" constant="24" id="UJf-JT-SZO"/>
+                            <constraint firstItem="fY0-Fn-fHI" firstAttribute="trailing" secondItem="PRz-bu-nOh" secondAttribute="trailing" id="cDu-cT-ZfJ"/>
                             <constraint firstItem="egp-gf-tIf" firstAttribute="leading" secondItem="PRz-bu-nOh" secondAttribute="leading" id="gJz-lY-3ql"/>
                             <constraint firstItem="egp-gf-tIf" firstAttribute="trailing" secondItem="PRz-bu-nOh" secondAttribute="trailing" id="kxI-Ie-LqG"/>
-                            <constraint firstItem="r1H-28-TAA" firstAttribute="centerX" secondItem="PRz-bu-nOh" secondAttribute="centerX" id="sKs-SD-Ejq"/>
                             <constraint firstItem="r1H-28-TAA" firstAttribute="top" secondItem="fY0-Fn-fHI" secondAttribute="top" constant="16" id="t48-PL-jc2"/>
                             <constraint firstItem="egp-gf-tIf" firstAttribute="top" secondItem="PRz-bu-nOh" secondAttribute="top" id="uNu-0L-6et"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="memeBottomText" destination="nxL-PY-XDk" id="H9g-Hd-UzP"/>
                         <outlet property="memeEditingCancelButton" destination="FrZ-f5-nST" id="ufX-lB-tdI"/>
-                        <outlet property="memeEditingDoneButton" destination="OAF-yz-g3s" id="pSO-XF-6AM"/>
+                        <outlet property="memeEditingDoneButton" destination="x8n-Rs-fQ3" id="4FE-XS-6yb"/>
                         <outlet property="memeEditorNavigationBar" destination="egp-gf-tIf" id="JUh-vc-Ug6"/>
                         <outlet property="memeImageCanvas" destination="fY0-Fn-fHI" id="BIO-Q9-fpd"/>
                         <outlet property="memeTopText" destination="r1H-28-TAA" id="qWF-S7-6lw"/>

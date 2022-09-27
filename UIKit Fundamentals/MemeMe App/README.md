@@ -18,43 +18,59 @@ MemeMe v1.0 has two view controller scenes:
 
 The launch screen displays the app's logo and name as well as the version number.
 
-![Launch screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-launch-screen.png)
+![Launch screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-launch-screen-portrait.png)
+
+![Launch screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-launch-screen-landscape.png)
 
 ### Home
 
-![Home screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-home.png)
+![Home screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-home-portrait.png)
+
+![Home screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-home-landscape.png)
 
 ### Image Picker
 
 iOS's built-in `UIImagePickerController` is used to select an image from the camera Photo Album or take a picture with the camera.
 
-![Image picker screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-image-picker.png)
+![Image picker screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-image-picker-portrait.png)
+
+![Image picker screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-image-picker-landscape.png)
 
 ### Meme Editor
 
 The chosen image is displayed with default text at the top and bottom. The user can edit the text.
 
-![Meme editor screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-editor.png)
+![Meme editor screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-editor-portrait.png)
+
+![Meme editor screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-editor-landscape.png)
 
 ### Cancelling Meme Alert
 
-![Cancelling meme alert screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-cancel-alert.png)
+![Cancelling meme alert screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-cancel-alert-portrait.png)
+
+![Cancelling meme alert screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-cancel-alert-landscape.png)
 
 ### Missing Text Alert
 
 An alert is displayed to the user if they try to share a meme without adding any text.
 
-![Missing text alert screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-missing-text-alert.png)
+![Missing text alert screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-missing-text-alert-portrait.png)
+
+![Missing text alert screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-missing-text-alert-landscape.png)
 
 ### Move View Up When Keyboard Appears
 
 The view is moved up when the keyboard appears to edit the bottom text field.
 
-![Move view up when keyboard appears screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-move-view-up.png)
+![Move view up when keyboard appears screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-move-view-up-portrait.png)
+
+![Move view up when keyboard appears screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-move-view-up-landscape.png)
 
 ### Meme Sharing
 
-![Meme sharing screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-sharing-options.png)
+![Meme sharing screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-share-actions-portrait.png)
+
+![Meme sharing screen of the MemeMe app](https://raw.githubusercontent.com/patternina/ios-developer-nanodegree/main/UIKit%20Fundamentals/images/mememe-1.0-share-actions-landscape.png)
 
 ## Requirements
 

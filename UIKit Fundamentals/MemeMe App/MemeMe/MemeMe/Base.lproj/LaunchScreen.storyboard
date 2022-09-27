@@ -40,7 +40,7 @@ to meme them all!</string>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPI-uf-cWF">
-                                <rect key="frame" x="194" y="829" width="26" height="17"/>
+                                <rect key="frame" x="194" y="837" width="26" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.25098039220000001" green="0.22352941179999999" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -49,7 +49,7 @@ to meme them all!</string>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.65490196078431373" green="0.63137254901960782" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pPI-uf-cWF" secondAttribute="bottom" constant="16" id="2eQ-E9-zhq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pPI-uf-cWF" secondAttribute="bottom" constant="8" id="2eQ-E9-zhq"/>
                             <constraint firstItem="Qg3-9i-8D6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="H5h-cz-UFl"/>
                             <constraint firstItem="pPI-uf-cWF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="L0h-Lx-zWE"/>
                             <constraint firstItem="Qg3-9i-8D6" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ock-JK-m2S"/>

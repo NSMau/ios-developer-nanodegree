@@ -19,6 +19,7 @@ class HomeViewController:
   
   // MARK: Outlets
   @IBOutlet weak var emptyState: UIStackView!
+  @IBOutlet weak var emptyStateIllustration: UIImageView!
   @IBOutlet weak var memeGallery: UIStackView!
   @IBOutlet weak var imagePickerToolbar: UIToolbar!
   @IBOutlet weak var photoLibraryButton: UIBarButtonItem!
@@ -26,14 +27,12 @@ class HomeViewController:
   
   
   // MARK: State
+
   var memeLibrary: [AppModel.Meme] = []
   
   
   // MARK: Lifecycle
-  override func viewDidLoad() {
-    super.viewDidLoad()
-  }
-  
+
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
@@ -41,6 +40,14 @@ class HomeViewController:
     
     // Disable the Camera button if the device being used doesn't have a camera
     cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+    
+    AppModel.respondToLandscapeOrientation(effect: respondToOrientation)
+  }
+  
+  override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    super.viewWillTransition(to: size, with: coordinator)
+    
+    AppModel.respondToLandscapeOrientation(effect: respondToOrientation)
   }
   
   
@@ -120,6 +127,17 @@ class HomeViewController:
       emptyState.isHidden = true
       // memeGallery.isHidden = false
     }
+  }
+  
+  /// Applies the corresponding visual changes according to the current device orientation
+  func respondToOrientation() {
+    
+    if AppModel.isLandscapeMode {
+      emptyStateIllustration.isHidden = true
+    } else {
+      emptyStateIllustration.isHidden = false
+    }
+    
   }
 
 }

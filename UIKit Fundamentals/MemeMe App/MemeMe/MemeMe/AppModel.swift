@@ -20,12 +20,27 @@ struct AppModel {
   static var topTextFieldPlaceholder = "TOP TEXT"
   static var bottomTextFieldPlaceholder = "BOTTOM TEXT"
   
+  static var isLandscapeMode = false
+  
   static func getParagraphStyle () -> NSMutableParagraphStyle {
     let _paragraphStyle = NSMutableParagraphStyle()
     
     _paragraphStyle.alignment = .center
     
     return _paragraphStyle
+  }
+  
+  static func getDeviceOrientation() {
+    if UIDevice.current.orientation.isLandscape {
+      isLandscapeMode = true
+    } else {
+      isLandscapeMode = false
+    }
+  }
+  
+  static func respondToLandscapeOrientation(effect: () -> Void) {
+    getDeviceOrientation()
+    effect()
   }
   
   // MARK: Meme
