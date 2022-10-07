@@ -63,7 +63,7 @@
                                                     <backgroundConfiguration key="background" image="scissors-hand-gesture"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="chooseScissors:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lj3-Cd-tcf"/>
+                                                    <action selector="determineWinner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rK7-NW-mU3"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrc-cc-m6T" userLabel="buttonPaper">
@@ -101,7 +101,6 @@
                         <outlet property="paperButton" destination="xrc-cc-m6T" id="uwe-vu-WKm"/>
                         <outlet property="rockButton" destination="OJ9-bO-WVq" id="Gps-yk-7cn"/>
                         <outlet property="scissorsButton" destination="jqh-Ks-98i" id="FQ1-kH-SQg"/>
-                        <segue destination="RgU-EV-MPG" kind="presentation" identifier="play" id="BQB-3g-C0A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -113,14 +112,14 @@
             <objects>
                 <viewController storyboardIdentifier="GameResultViewController" id="RgU-EV-MPG" userLabel="GameResultViewController" customClass="GameResultViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0l9-lm-ZCA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="vfr-Ua-FyT">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="192" translatesAutoresizingMaskIntoConstraints="NO" id="Kie-UA-a6o" userLabel="mainView">
-                                <rect key="frame" x="47" y="249.5" width="320" height="528.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="128" translatesAutoresizingMaskIntoConstraints="NO" id="Kie-UA-a6o" userLabel="mainView">
+                                <rect key="frame" x="47" y="323.5" width="320" height="508.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="JLC-CD-sG6" userLabel="gameResultView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="288.5"/>
@@ -142,22 +141,38 @@
                                             <constraint firstItem="Y4t-XN-iys" firstAttribute="leading" secondItem="JLC-CD-sG6" secondAttribute="leading" constant="40" id="Lpa-FN-bDI"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XF-ug-yLC" userLabel="playAgainButton">
-                                        <rect key="frame" x="80" y="480.5" width="160" height="48"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="k6X-O2-oMS"/>
-                                            <constraint firstAttribute="height" constant="48" id="xag-8c-cIX"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Play Again" titleAlignment="center">
-                                            <fontDescription key="titleFontDescription" name="SuretonComics-Regular" family="Sureton Comics" pointSize="16"/>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="playAgain" destination="RgU-EV-MPG" eventType="touchUpInside" id="dlU-NO-Jad"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-Yz-ilL" userLabel="buttons">
+                                        <rect key="frame" x="80" y="416.5" width="160" height="92"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XF-ug-yLC" userLabel="playAgainButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="48"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="k6X-O2-oMS"/>
+                                                    <constraint firstAttribute="height" constant="48" id="xag-8c-cIX"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Play Again" titleAlignment="center">
+                                                    <fontDescription key="titleFontDescription" name="SuretonComics-Regular" family="Sureton Comics" pointSize="16"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="playAgain" destination="RgU-EV-MPG" eventType="touchUpInside" id="dlU-NO-Jad"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOK-d8-9xd" userLabel="viewHistoryButton">
+                                                <rect key="frame" x="31.5" y="64" width="97" height="28"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="View History" titleAlignment="center">
+                                                    <fontDescription key="titleFontDescription" name="SuretonComics-Regular" family="Sureton Comics" pointSize="14"/>
+                                                    <color key="baseForegroundColor" red="0.039215686270000001" green="0.039215686270000001" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="showGameHistory:" destination="RgU-EV-MPG" eventType="touchUpInside" id="KQu-My-TR4"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -175,11 +190,82 @@
                     <connections>
                         <outlet property="gameResultImage" destination="Xwf-I5-iXD" id="bmh-vK-fkf"/>
                         <outlet property="gameResultMessage" destination="Y4t-XN-iys" id="DkJ-Rv-oDx"/>
+                        <outlet property="playAgainButton" destination="6XF-ug-yLC" id="zYX-Kw-jx3"/>
+                        <outlet property="viewHistoryButton" destination="sOK-d8-9xd" id="HcZ-XF-lk4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQy-aM-uH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="853.62318840579712" y="93.75"/>
+        </scene>
+        <!--GameHistoryViewController-->
+        <scene sceneID="mtK-P2-oez">
+            <objects>
+                <viewController storyboardIdentifier="GameHistoryViewController" id="AQD-5m-KQ7" userLabel="GameHistoryViewController" customClass="GameHistoryViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hWM-PE-JiU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="mmh-zj-bUs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SBh-Yo-Ywy" userLabel="gameHistoryTableView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GameHistoryRecordCell" id="F7p-ec-gei">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F7p-ec-gei" id="oDD-xi-pZF">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="AQD-5m-KQ7" id="xiR-d1-Chj"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvQ-9V-Fsb" userLabel="playAgainButton">
+                                <rect key="frame" x="127" y="806" width="160" height="48"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="0CW-E9-KSO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="ekj-wz-4W7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Hide History" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" name="SuretonComics-Regular" family="Sureton Comics" pointSize="16"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playAgain" destination="AQD-5m-KQ7" eventType="touchUpInside" id="owP-8R-1sV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hZc-pB-SX5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="SBh-Yo-Ywy" secondAttribute="bottom" id="Gyx-d5-vb1"/>
+                            <constraint firstItem="SBh-Yo-Ywy" firstAttribute="leading" secondItem="mmh-zj-bUs" secondAttribute="leading" id="KC0-NA-OIl"/>
+                            <constraint firstItem="mmh-zj-bUs" firstAttribute="top" secondItem="hWM-PE-JiU" secondAttribute="top" id="Ste-wa-HIg"/>
+                            <constraint firstItem="SBh-Yo-Ywy" firstAttribute="top" secondItem="hWM-PE-JiU" secondAttribute="top" id="akz-WY-wXN"/>
+                            <constraint firstItem="hZc-pB-SX5" firstAttribute="bottom" secondItem="wvQ-9V-Fsb" secondAttribute="bottom" constant="8" id="cjz-YW-YEa"/>
+                            <constraint firstAttribute="trailing" secondItem="SBh-Yo-Ywy" secondAttribute="trailing" id="d2G-sj-WPn"/>
+                            <constraint firstItem="wvQ-9V-Fsb" firstAttribute="centerX" secondItem="hWM-PE-JiU" secondAttribute="centerX" id="hqA-9i-LSe"/>
+                            <constraint firstAttribute="bottom" secondItem="mmh-zj-bUs" secondAttribute="bottom" id="usS-ea-lfK"/>
+                            <constraint firstItem="mmh-zj-bUs" firstAttribute="leading" secondItem="hWM-PE-JiU" secondAttribute="leading" id="vNk-d7-xfs"/>
+                            <constraint firstAttribute="trailing" secondItem="mmh-zj-bUs" secondAttribute="trailing" id="wzr-dE-0xm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="historyTableView" destination="SBh-Yo-Ywy" id="Ebg-SB-BqH"/>
+                        <outlet property="playAgainButton" destination="wvQ-9V-Fsb" id="Onk-HB-UmO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hIy-nu-vfc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1686.9565217391305" y="93.75"/>
         </scene>
     </scenes>
     <resources>

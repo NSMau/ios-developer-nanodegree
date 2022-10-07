@@ -23,20 +23,19 @@ class ChoiceViewController: UIViewController {
     super.viewWillAppear(animated)
   }
   
+  
   // MARK: Actions
   
   @IBAction func determineWinner(_ sender: UIButton) {
-    let controller = self.storyboard?.instantiateViewController(withIdentifier: "GameResultViewController") as! GameResultViewController
+    let controller = self.storyboard?.instantiateViewController(
+      withIdentifier: "GameResultViewController"
+    ) as! GameResultViewController
     
-    controller.playerChoice = getUserChoice(sender)
+    controller.gameResult.playerChoice = getUserChoice(sender)
     
     present(controller, animated: true, completion: nil)
   }
   
-  // MARK: Segue with code
-  @IBAction func chooseScissors(_ sender: UIButton) {
-    performSegue(withIdentifier: "play", sender: sender)
-  }
   
   // MARK: Utilities
   
