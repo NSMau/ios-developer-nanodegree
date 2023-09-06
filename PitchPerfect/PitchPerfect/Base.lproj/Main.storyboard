@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="soD-jY-DO1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="soD-jY-DO1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment version="5632" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -74,7 +75,9 @@
                             <constraint firstItem="EjH-cB-UYu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z5D-GS-Inq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="who-Wc-A8e"/>
+                    <navigationItem key="navigationItem" customizationIdentifier="" id="who-Wc-A8e">
+                        <barButtonItem key="backBarButtonItem" title="New Recording" id="XNS-k6-fXS"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="recordingLabel" destination="R82-OY-EdC" id="mOi-yS-RhS"/>
                         <outlet property="startRecordingButton" destination="ZeL-3E-yth" id="HaO-4P-VFw"/>
@@ -86,7 +89,7 @@
             </objects>
             <point key="canvasLocation" x="1023.1884057971015" y="60.9375"/>
         </scene>
-        <!--Play Sounds View Controller-->
+        <!--Effects-->
         <scene sceneID="WH8-Uo-x8b">
             <objects>
                 <viewController id="fPN-1V-qpz" customClass="PlaySoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
@@ -98,7 +101,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMo-AC-E6H" userLabel="Stop Playing Button">
-                                <rect key="frame" x="175" y="576" width="64" height="64"/>
+                                <rect key="frame" x="175" y="784" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="97Q-WY-2DF"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="EGq-6n-1U7"/>
@@ -224,11 +227,13 @@
                             <constraint firstItem="l1I-pZ-asi" firstAttribute="centerX" secondItem="fhU-dw-NRj" secondAttribute="centerX" id="TrT-E3-6el"/>
                             <constraint firstItem="X9l-90-RiU" firstAttribute="leading" secondItem="fhU-dw-NRj" secondAttribute="leading" id="Yh0-na-1xM"/>
                             <constraint firstItem="X9l-90-RiU" firstAttribute="centerY" secondItem="fhU-dw-NRj" secondAttribute="centerY" id="pfv-PR-fAq"/>
-                            <constraint firstItem="mMo-AC-E6H" firstAttribute="top" secondItem="l1I-pZ-asi" secondAttribute="bottom" constant="16" id="tRM-bZ-NmE"/>
+                            <constraint firstItem="mMo-AC-E6H" firstAttribute="top" secondItem="fhU-dw-NRj" secondAttribute="bottom" constant="-112" id="tRM-bZ-NmE"/>
                             <constraint firstAttribute="bottom" secondItem="X9l-90-RiU" secondAttribute="bottom" id="xW9-Oh-O71"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="WQC-9Z-wHm"/>
+                    <navigationItem key="navigationItem" title="Effects" customizationIdentifier="" id="WQC-9Z-wHm" colorLabel="IBBuiltInLabel-Gray">
+                        <barButtonItem key="backBarButtonItem" title="New Recording" id="oDj-pE-UTT"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="echoEffectButton" destination="WIK-y5-Z3J" id="zMn-h4-YQt"/>
                         <outlet property="fastEffectButton" destination="8yJ-7B-CH2" id="olT-HN-fu6"/>
@@ -248,9 +253,15 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="soD-jY-DO1" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SO8-he-9rT">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="SO8-he-9rT">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.93556016156462585" green="0.776812287414966" blue="0.655718537414966" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="standardAppearance"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -262,6 +273,7 @@
             <point key="canvasLocation" x="113.04347826086958" y="60.9375"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="Background" width="428" height="926"/>
         <image name="Logotype" width="226" height="34"/>
