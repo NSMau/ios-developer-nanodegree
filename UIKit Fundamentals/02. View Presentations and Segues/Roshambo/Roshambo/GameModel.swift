@@ -30,4 +30,4 @@ enum Winner: String {
   case Player = "Player", AI = "AI", Tie = "Tie"
 }
 
-var gameHistory: [GameResult] = []
+var gameHistory = [GameResult]()

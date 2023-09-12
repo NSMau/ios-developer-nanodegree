@@ -11,10 +11,11 @@ class GameResultViewController: UIViewController {
   
   // MARK: Outlets
   
-  @IBOutlet private weak var gameResultImage: UIImageView!
-  @IBOutlet private weak var gameResultMessage: UITextView!
-  @IBOutlet private weak var playAgainButton: UIButton!
-  @IBOutlet private weak var viewHistoryButton: UIButton!
+  // Use private(set) to make properties read-only from outside the class.
+  @IBOutlet private(set) weak var gameResultImage: UIImageView!
+  @IBOutlet private(set) weak var gameResultMessage: UITextView!
+  @IBOutlet private(set) weak var playAgainButton: UIButton!
+  @IBOutlet private(set) weak var viewHistoryButton: UIButton!
   
   // MARK: Properties
   var gameResult = GameResult()
