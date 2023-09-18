@@ -131,12 +131,8 @@ class HomeViewController:
   
   /// Applies the corresponding visual changes according to the current device orientation
   func respondToOrientation() {
-    
-    if AppModel.isLandscapeMode {
-      emptyStateIllustration.isHidden = true
-    } else {
-      emptyStateIllustration.isHidden = false
-    }
+      
+    emptyStateIllustration.isHidden = AppModel.isLandscapeMode
     
   }
 
